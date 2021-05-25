@@ -6,14 +6,13 @@
   "author": "Yuya Kasai <moyoyomiyazawa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "dependencies": {
     "emoji-regex": "^9.2.2",
     "figlet": "^1.5.0"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^8.4.0"
+    "jest": "^26.6.3"
   }
 }

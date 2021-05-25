@@ -1,19 +1,17 @@
-const { expect } = require('chai');
 const myOriginalLibrary = require('../src/index.js');
 
-describe('myOriginalLibrary', () => {
-  it('should pass emoji as argument', () => {
+describe('myOriginalLibrary()', () => {
+  test('emojiを引数にセットできる', async () => {
     const response = myOriginalLibrary('🎉');
-    expect(response).to.equal('OK');
+    expect(response).toBe('OK');
   });
-
-  it('should throw error when emoji is not passed', () => {
-    expect(() => myOriginalLibrary('')).to.throw();
-    expect(() => myOriginalLibrary('test')).to.throw();
-    expect(() => myOriginalLibrary(123)).to.throw();
-    expect(() => myOriginalLibrary(null)).to.throw();
-    expect(() => myOriginalLibrary()).to.throw();
-    expect(() => myOriginalLibrary([])).to.throw();
-    expect(() => myOriginalLibrary({})).to.throw();
+  test('emoji以外が引数にセットされた場合、例外を投げる', () => {
+    expect(() => myOriginalLibrary('')).toThrow();
+    expect(() => myOriginalLibrary('test')).toThrow();
+    expect(() => myOriginalLibrary(123)).toThrow();
+    expect(() => myOriginalLibrary(null)).toThrow();
+    expect(() => myOriginalLibrary()).toThrow();
+    expect(() => myOriginalLibrary([])).toThrow();
+    expect(() => myOriginalLibrary({})).toThrow();
   });
 });
