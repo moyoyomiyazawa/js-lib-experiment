@@ -6,7 +6,7 @@ const myOriginalLibrary = (emoji) => {
   const isEmoji = emojiRegex().exec(emoji);
 
   if (isEmoji) {
-    const decoration = emoji.repeat(30);
+    const decoration = emoji.repeat(28);
 
     figlet(message, (_, result) => {
       console.log(decoration);
